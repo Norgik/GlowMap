@@ -19,7 +19,11 @@ through a 220 Ω resistor, powered from the board's USB‑C. See `docs/ESP32.md`
 WLED pitfalls (2D addressing, frozen segments, direct mode before scanning).
 
 The UI is in Russian. Requires Xcode 16+, iOS 17+, a physical iPhone (camera, Bluetooth, local
-network). MIT licensed.
+network).
+
+**License: PolyForm Noncommercial 1.0.0** — free for personal, hobby, educational and research
+use, including modifications and sharing. Selling it, or using it in a commercial product or
+service, is not permitted without the author's written permission. See `LICENSE`.
 
 ---
 
