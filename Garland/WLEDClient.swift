@@ -126,8 +126,9 @@ final class WLEDClient {
         }
     }
 
-    /// Адрес, который стоит предложить, если ничего не сохранено (последний известный IP платы).
-    static let suggestedHost = "192.168.1.166"
+    /// Адрес по умолчанию для поля ввода, если ничего не сохранено. Пусто: у каждого своя сеть,
+    /// Bonjour обычно находит плату сам, иначе IP берут из роутера или из веб-интерфейса WLED.
+    static let suggestedHost = ""
 
     func connect(host newHost: String) {
         let h = newHost.trimmingCharacters(in: .whitespaces)

@@ -1,3 +1,28 @@
+# GlowMap
+
+**Twinkly-style control for cheap addressable fairy lights.** An iOS app (SwiftUI) that
+maps every LED of a WS281x string with the phone camera and then drives shape-aware effects —
+either computed on the phone (DDP, 30 fps) or uploaded into [WLED](https://kno.wled.ge) as a
+2D `ledmap.json` so the ESP32 runs them autonomously.
+
+- Camera mapping: flat (window, wall) and **tree** (four views, cone unwrap); outlier filter by wire
+  continuity, neighbour fill, layout rotate/flip, tap-to-verify.
+- WLED over Wi‑Fi: discovery, live preview (WebSocket), 16 curated 2D effects with baked palettes,
+  scenes, effect constructor (stripes, gradient, spiral, rings, plasma, sparkles), scrolling text,
+  schedule and playlists stored in the controller, strip length 100/200/custom.
+- Legacy BLE stage for the stock `LEDDMX-00` controller (LED LAMP app family): colour, brightness,
+  effects, pause, plus a full protocol write-up of what that firmware can and cannot do
+  (`docs/PIXEL-TEST.md`).
+
+Hardware used: 200-LED USB fairy string (JH-CLD-01), ESP32 DevKit with WLED 16.0.1 on GPIO18
+through a 220 Ω resistor, powered from the board's USB‑C. See `docs/ESP32.md` for wiring and the
+WLED pitfalls (2D addressing, frozen segments, direct mode before scanning).
+
+The UI is in Russian. Requires Xcode 16+, iOS 17+, a physical iPhone (camera, Bluetooth, local
+network). MIT licensed.
+
+---
+
 # Гирлянда — iOS-приложение для LEDDMX-00 (JH-CLD-01)
 
 SwiftUI + CoreBluetooth. Управляет родным BLE-контроллером гирлянды через сервис `FFE0`,

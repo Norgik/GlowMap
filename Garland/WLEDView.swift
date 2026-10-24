@@ -92,7 +92,7 @@ struct WLEDView: View {
                         }
                     }
                     HStack {
-                        TextField("IP или имя, напр. 192.168.1.166", text: $hostField)
+                        TextField("IP или имя, напр. 192.168.1.50 или wled.local", text: $hostField)
                             .keyboardType(.URL).autocorrectionDisabled().textInputAutocapitalization(.never)
                         Button("Подключить") { wled.connect(host: hostField) }
                             .buttonStyle(.borderedProminent)
