@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NSBonjourServices</key>
+	<array>
+		<string>_wled._tcp</string>
+		<string>_http._tcp</string>
+	</array>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>Нужен доступ к локальной сети, чтобы найти контроллер WLED и отправлять ему кадры по Wi‑Fi.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Камера нужна, чтобы построить карту расположения светодиодов гирлянды.</string>
+</dict>
+</plist>
